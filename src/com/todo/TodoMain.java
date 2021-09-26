@@ -38,6 +38,10 @@ public class TodoMain {
 			case "ls":
 				TodoUtil.listAll(l);
 				break;
+				
+			case "ls_cate":
+				TodoUtil.listCate(l);
+				break;
 
 			case "ls_name_asc":
 				l.sortByName();
@@ -65,7 +69,24 @@ public class TodoMain {
 			case "exit":
 				quit = true;
 				break;
-
+				
+			case "find":
+				String find=sc.nextLine().trim();
+				TodoUtil.find(l, find);
+				break;
+				
+			case "find_cate":
+				String findc = sc.nextLine().trim();
+				TodoUtil.findCate(l,findc);
+				break;
+				
+			case "ls_date_desc":
+				l.sortByDate();
+				l.reverseList();
+				System.out.println("Sorted by date (desc).");
+				isList = true;
+				break;
+				
 			default:
 				System.out.println("please enter one of the above mentioned command. (use 'help' command)");
 				break;

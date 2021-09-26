@@ -11,7 +11,11 @@ public class TodoList {
 	public TodoList() {
 		this.list = new ArrayList<TodoItem>();
 	}
-
+	
+	public int listSize() {
+		return list.size();
+	}
+	
 	public void addItem(TodoItem t) {
 		list.add(t);
 	}
